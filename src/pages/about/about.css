@@ -1,0 +1,88 @@
+
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #fceabb, #dce9f9, #f8bbd0);
+/* Lighter, bright colors */
+  background-size: 400% 400%;
+  animation: backgroundAnimate 5s ease infinite;
+  position: relative;
+}
+
+.about-content {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Less opacity for less haze */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 20px blue; /* Slightly brighter shadows */
+  backdrop-filter: blur(8px); /* Less blur for more clarity */
+  transform: scale(0.9);
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes backgroundAnimate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.about-content p {
+  font-size: 22px;
+  color: black;
+  line-height: 1.8;
+  font-family: 'Roboto', sans-serif;
+  margin: 20px 0;
+  position: relative;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4); /* Softer glow */
+}
+
+.about-content p .highlight {
+  font-weight: bold;
+  color: brown; /* Soft pink */
+  position: relative;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-content p .highlight:hover {
+  color:blue;
+  text-shadow: 0 0 20px #ff80ab, 0 0 30px #ff80ab;
+  transform: scale(1.1);
+}
+
+.about-content p span {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color:black;
+  transition: color 0.3s ease;
+}
+
+.about-content p span:hover {
+  color: #ff80ab; /* Same soft pink for hover effect */
+  cursor: pointer;
+}
