@@ -26,7 +26,7 @@ const Lecture = ({ user }) => {
     setLecLoading(true);
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/lectures/${params.id}`,
+        `https://e-learn-backend-sbet.onrender.com/api/lectures/${params.id}`,
         {
           headers: {
             token: localStorage.getItem("token"),
@@ -54,7 +54,7 @@ const Lecture = ({ user }) => {
     setLecLoading(true);
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/lecture/${id}`,
+        `https://e-learn-backend-sbet.onrender.com/api/lecture/${id}`,
         {
           headers: {
             token: localStorage.getItem("token"),
@@ -81,7 +81,7 @@ const Lecture = ({ user }) => {
 
     try {
       const { data } = await axios.post(
-        `http://localhost:3000/api/course/${params.id}`,
+        `https://e-learn-backend-sbet.onrender.com/api/course/${params.id}`,
         myForm,
         {
           headers: {
@@ -106,7 +106,7 @@ const Lecture = ({ user }) => {
     if (confirm("Are you sure you want to delete this lecture?")) {
       try {
         const { data } = await axios.delete(
-          `http://localhost:3000/api/lecture/${id}`,
+          `https://e-learn-backend-sbet.onrender.com/api/lecture/${id}`,
           {
             headers: {
               token: localStorage.getItem("token"),
