@@ -109,7 +109,7 @@ export const UserContextProvider = ({ children }) => {
     const activationToken = localStorage.getItem("activationToken");
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/api/user/verify",
+        "https://e-learn-backend-sbet.onrender.com/api/user/verify",
         {
           otp,
           activationToken,
@@ -128,7 +128,7 @@ export const UserContextProvider = ({ children }) => {
 
   async function fetchUser() {
     try {
-      const { data } = await axios.get(`http://localhost:3000/api/user/me`, {
+      const { data } = await axios.get(`https://e-learn-backend-sbet.onrender.com/api/user/me`, {
         headers: {
           token: localStorage.getItem("token"),
         },
