@@ -14,7 +14,7 @@ import { UserData } from "./context/userContext";
 import Loading from "./components/loading/Loading";
 import Courses from "./pages/courses/Courses";
 import Dashboard from "./pages/dashboard/Dashboard";
-import CourseStudy from "./pages/courseStudy/CourseStudy";
+import CourseStudy from "./pages/coursestudy/CourseStudy";
 import Lecture from "./pages/lecture/Lecture";
 
 const App = () => {
