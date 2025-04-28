@@ -20,7 +20,7 @@ export const UserContextProvider = ({ children }) => {
     try {
       console.log("before server");
       const { data } = await axios.post(
-        "http://localhost:3000/api/user/login",
+        "https://e-learn-backend-sbet.onrender.com/api/user/login",
         {
           email,
           password,
@@ -57,7 +57,7 @@ export const UserContextProvider = ({ children }) => {
     try {
       console.log("before server");
       const { data } = await axios.post(
-        "http://localhost:3000/api/user/register",
+        "https://e-learn-backend-sbet.onrender.com/api/user/register",
         {
           name,
           email,
